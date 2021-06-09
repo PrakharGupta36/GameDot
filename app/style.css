@@ -13,17 +13,47 @@ html,body{
 
 #full-card{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    font-weight: bolder;
     margin: 1rem;
     place-items: center;
     color: white;
     text-align: center;
 }
 
+@media screen and (min-width:640px){    
+    #full-card{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (min-width:768px){    
+    #full-card{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (min-width:1024px){    
+    #full-card{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (min-width:1200px){    
+    #full-card{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media screen and (min-width:1600px){    
+    #full-card{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
 .card{
     margin: 1rem;
     background: #151a21;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 #1f268780;
     backdrop-filter: blur( 9px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;

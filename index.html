@@ -4,21 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app/style.css">
+    <meta name = "HandheldFriendly" content= "True">
+    <meta name="description" content="The encylopedia of video games">
+    <meta name = "og:title" content = "GameDot">
+    <meta name="og:description" content="The encylopedia of video games">
+    <meta name="robots" content="index, follow">
+    <meta name = "twiter:card" content = "summary">
+    <meta name = "twitter:site" content = "@prakhar3690">
+    <meta name = "twitter:title" content = "GameDot">
+    <meta name="twitter:description" content="The encylopedia of video games">  
+    <meta name = "twitter:image" content = "assets/wallpaper.jpeg">  
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
     <title>GameDot</title>
-    <link rel="icon" href="assets/icon.png">
-
+    <link rel="stylesheet" href="app/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-180.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180.png">
+    <meta name="theme-color" content="#151a21">
+    <link rel="icon" href="icon.png">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="app/app.js"></script>
 </head>
 <body>
     <main>
         <header>
             <h1> GameDot </h1>
-            <input type="text" placeholder="Seach Games..">
+            <input type="text"  onkeyup="filter()" id="search" placeholder="Seach Games..">
         </header>
         <section id="full-card">
             
         </section>
     </main>
-    <script src="app/app.js"></script>
+    
+    <script>
+        if ('serviceWorker' in navigator){
+            navigator.serviceWorker.register("./service-worker.js")
+        }
+    </script>
 </body>
 </html>
