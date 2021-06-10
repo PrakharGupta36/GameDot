@@ -1,5 +1,6 @@
 let card = document.getElementById("full-card")
 
+
 function filter(){
 	let searchFilter = document.getElementById("search")		
 	let filter = searchFilter.value.toUpperCase()
@@ -15,7 +16,9 @@ function filter(){
 	}
 }	
 
-fetch("https://api.rawg.io/api/games?key=79dd76a7ff054bbd8e582beb9eb76bbe")
+for (let i = 1; i < 50; i++){ 
+
+fetch(`https://api.rawg.io/api/games?key=79dd76a7ff054bbd8e582beb9eb76bbe&page=${i}`)
   .then((response) => {
     if (response.ok) {
       return response.json();
@@ -26,9 +29,10 @@ fetch("https://api.rawg.io/api/games?key=79dd76a7ff054bbd8e582beb9eb76bbe")
   .then(data => {
 
     let listContentDiv; let listContentP; let listContentImg;
-    let names = []; let img = []; let row = 0; 
+    let names = []; let img = []; let row = 0;
     const games = data.results;
-   
+    
+    console.log(data)
 
     
 
@@ -46,7 +50,7 @@ fetch("https://api.rawg.io/api/games?key=79dd76a7ff054bbd8e582beb9eb76bbe")
       listContentDiv.setAttribute("class","card");
       listContentImg.setAttribute("class", "cardImg lazyload")
       listContentP.setAttribute("id", `text${row}`)
-      listContentDiv.setAttribute("id", `main${row}`)
+      
 
       card.appendChild(listContentDiv)
       listContentDiv.appendChild(listContentImg)
@@ -56,17 +60,16 @@ fetch("https://api.rawg.io/api/games?key=79dd76a7ff054bbd8e582beb9eb76bbe")
       listContentP.textContent = names[i] 
       listContentImg.setAttribute("src", games[i].background_image)
       
-      
+    
       
       row ++
     }
     
     
-    console.log(img) 
+ 
   })
   .catch((error) => console.error("FETCH ERROR:", error));
 
- 
+}  
 
 
-  
