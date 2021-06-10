@@ -1,1 +1,53 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);*{font-family:Poppins}body,html{max-width:100%;overflow-x:hidden;margin:0;background-color:#181818}#full-card{display:grid;font-weight:bolder;margin:1rem;place-items:center;color:#fff;text-align:center}@media screen and (min-width:640px){#full-card{grid-template-columns:repeat(1,1fr)}}@media screen and (min-width:768px){#full-card{grid-template-columns:repeat(2,1fr)}}@media screen and (min-width:1024px){#full-card{grid-template-columns:repeat(3,1fr)}}@media screen and (min-width:1200px){#full-card{grid-template-columns:repeat(4,1fr)}}@media screen and (min-width:1600px){#full-card{grid-template-columns:repeat(5,1fr)}}.card{margin:1rem;background:#151a21;box-shadow:0 8px 32px 0 #1f268780;backdrop-filter:blur( 9px );-webkit-backdrop-filter:blur( 4px );border-radius:10px;border:1px solid #151a21}.cardImg{width:100%;border-top-left-radius:5px;border-top-right-radius:5px;height:220px}header{display:grid;place-items:center;color:#fff;text-align:center}input{background-color:transparent;border:1px solid #fff;padding:1rem 2rem;color:#fff;text-align:center;font-weight:bolder}::placeholder{color:rgba(255,255,255,.39);font-weight:bolder}
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);*{font-family:Poppins}body,html{max-width:100%;overflow-x:hidden;margin:0;background-color:#181818}#full-card{display:grid;font-weight:bolder;margin:1rem;place-items:center;color:#fff;text-align:center}@media screen and (min-width:640px){#full-card{grid-template-columns:repeat(1,1fr)}}@media screen and (min-width:768px){#full-card{grid-template-columns:repeat(2,1fr)}}@media screen and (min-width:1024px){#full-card{grid-template-columns:repeat(3,1fr)}}@media screen and (min-width:1200px){#full-card{grid-template-columns:repeat(4,1fr)}}@media screen and (min-width:1600px){#full-card{grid-template-columns:repeat(5,1fr)}}.card{margin:1rem;background:#151a21;box-shadow:0 8px 32px 0 #1f268780;backdrop-filter:blur( 9px );-webkit-backdrop-filter:blur( 4px );border-radius:10px;border:1px solid #151a21}.cardImg{width:100%;border-top-left-radius:5px;border-top-right-radius:5px;height:210px}header{display:grid;place-items:center;color:#fff;text-align:center}input{background-color:transparent;border:1px solid #fff;padding:1rem 2rem;color:#fff;text-align:center;font-weight:bolder}::placeholder{color:rgba(255,255,255,.39);font-weight:bolder}
+
+.buttons{
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card{
+    transition: all 0.5s;
+}
+
+.card:hover{
+    transform: translateY(
+        -10px
+    );
+}
+
+@media screen and (max-width:440px){
+    .buttons{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (min-width:550px){
+    .buttons{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+#page{
+    color: white;
+    text-align: center;
+    font-size: larger;
+    background-color: #151a21;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+
+button{
+    background-color: transparent;
+    color: white;
+    font-size: medium;
+    border: 1px solid white;
+    padding: .5rem 2rem;
+    
+}
+
+.fa-search{
+
+}
