@@ -11,7 +11,7 @@ let button1 = document.getElementById("next")
 let button2 = document.getElementById("prev")
 let page = document.getElementById("page")
 
-
+page.innerHTML = `Page ${parseInt(localStorage.getItem('counteruser'))}`
 
 button1.addEventListener("click",function(){
   counter++;
@@ -19,7 +19,6 @@ button1.addEventListener("click",function(){
   localStorage.setItem('counteruser', `${counter}`);
   // localStorage.clear()
   location.reload();
-  page.innerHTML = `Page ${parseInt(localStorage.getItem('counteruser'))}`
 })
 
 button2.addEventListener("click",function(){
@@ -30,7 +29,6 @@ button2.addEventListener("click",function(){
     localStorage.setItem('counteruser', `${counter}`);
     console.log(counter)
     location.reload();
-    page.innerHTML = `Page ${parseInt(localStorage.getItem('counteruser'))}`
   }
 })
 
