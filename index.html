@@ -1,3 +1,46 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta content="IE=edge"http-equiv=X-UA-Compatible><meta content="width=device-width,initial-scale=1"name=viewport><meta content=True name=HandheldFriendly><meta content="The encylopedia of video games"name=description><meta content=GameDot name=og:title><meta content="The encylopedia of video games"name=og:description><meta content="index, follow"name=robots><meta content=summary name=twiter:card><meta content=@prakhar3690 name=twitter:site><meta content=GameDot name=twitter:title><meta content="The encylopedia of video games"name=twitter:description><meta content=assets/wallpaper.jpeg name=twitter:image><script src=https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js></script><title>GameDot</title> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><link href=app/style.css rel=stylesheet><link href=./icons/apple-icon-180.png rel=apple-touch-icon sizes=57x57><link href=./icons/apple-icon-180.png rel=apple-touch-icon sizes=180x180><meta content=#151a21 name=theme-color><link href=icon.png rel=icon><link href=manifest.json rel=manifest><main><header><h1>GameDot</h1><input id="search" onkeyup=filter() placeholder="Seach Games.."></header> <section id=full-card></section> <section class="buttons"> <button id="prev" > <i class="fa fa-arrow-left" aria-hidden="true"></i> Prev </button> <button id="next"> Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>  </section> <p id="page"> Page 1 </p>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta content="IE=edge"http-equiv=X-UA-Compatible><meta content="width=device-width,initial-scale=1"name=viewport><meta content=True name=HandheldFriendly><meta content="The encylopedia of video games"name=description><meta content=GameDot name=og:title><meta content="The encylopedia of video games"name=og:description><meta content="index, follow"name=robots><meta content=summary name=twiter:card><meta content=@prakhar3690 name=twitter:site><meta content=GameDot name=twitter:title><meta content="The encylopedia of video games"name=twitter:description><meta content=assets/wallpaper.jpeg name=twitter:image><script src=https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js></script><title>GameDot</title> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><link href=app/style.css rel=stylesheet><link href=./icons/apple-icon-180.png rel=apple-touch-icon sizes=57x57><link href=./icons/apple-icon-180.png rel=apple-touch-icon sizes=180x180><meta content=#151a21 name=theme-color><link href=icon.png rel=icon><link href=manifest.json rel=manifest><body>
+<h1> <a href="index.html"> GameDot </a></h1>    
+<section id = "whenSignedOut" > 
+      <button id="signInBtn"> <span>  <img src="assets/icons8-google (3).svg" alt=""> </span> <p>  Sign in with Google  </p></button>
+</section>
+<button id="signOutBtn"> Sign Out </button> 
+    <main id = "main">  <header><input id="search" onkeyup=filter() placeholder="Seach Games.."></header> <section id=full-card></section> <section class="buttons"> <button id="prev" > <i class="fa fa-arrow-left"  aria-hidden="true"></i> Prev </button> <button id="next"> Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>  </section>
+    
 
-</main><script src=app/app.js defer></script><script>"serviceWorker"in navigator&&navigator.serviceWorker.register("./service-worker.js")</script>
+
+        <footer id="footerFlex"> <button class="btn"id="button1"></button><button class="btn" id="button2"></button><button class="btn" id="button3"></button> </footer> <p id="page"> Page 1 </p > 
+        
+        
+        </main>
+
+
+
+
+<script src=app/app.js defer></script><script>"serviceWorker"in navigator&&navigator.serviceWorker.register("./service-worker.js")</script>
+<script src="app/auth.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyALi2IWKhA5GIbQ5bvOojpfDv5JbGYLzmk",
+    authDomain: "gamedot-599e6.firebaseapp.com",
+    projectId: "gamedot-599e6",
+    storageBucket: "gamedot-599e6.appspot.com",
+    messagingSenderId: "296425731103",
+    appId: "1:296425731103:web:e46e941fe477e85cbd912a",
+    measurementId: "G-34LWD3Q5X7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+</html>
