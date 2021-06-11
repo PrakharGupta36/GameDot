@@ -1,10 +1,26 @@
 <!DOCTYPE html><html lang=en><meta charset=UTF-8><meta content="IE=edge"http-equiv=X-UA-Compatible><meta content="width=device-width,initial-scale=1"name=viewport><meta content=True name=HandheldFriendly><meta content="The encylopedia of video games"name=description><meta content=GameDot name=og:title><meta content="The encylopedia of video games"name=og:description><meta content="index, follow"name=robots><meta content=summary name=twiter:card><meta content=@prakhar3690 name=twitter:site><meta content=GameDot name=twitter:title><meta content="The encylopedia of video games"name=twitter:description><meta content=assets/wallpaper.jpeg name=twitter:image><script src=https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js></script><title>GameDot</title> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><link href=app/style.css rel=stylesheet><link href=./icons/apple-icon-180.png rel=apple-touch-icon sizes=57x57><link href=./icons/apple-icon-180.png rel=apple-touch-icon sizes=180x180><meta content=#151a21 name=theme-color><link href=icon.png rel=icon><link href=manifest.json rel=manifest><body>
-<h1> <a href="index.html"> GameDot </a></h1>    
-<section id = "whenSignedOut" > 
-      <button id="signInBtn"> <span>  <img src="assets/icons8-google (3).svg" alt=""> </span> <p>  Sign in with Google  </p></button>
-</section>
-<button id="signOutBtn"> Sign Out </button> 
-    <main id = "main">  <header><input id="search" onkeyup=filter() placeholder="Seach Games.."></header> <section id=full-card></section> <section class="buttons"> <button id="prev" > <i class="fa fa-arrow-left"  aria-hidden="true"></i> Prev </button> <button id="next"> Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>  </section>
+
+
+
+<nav> 
+  <ul> 
+    <div id="nav-search">
+      <li> <input id="search" onkeyup=filter() placeholder="Seach Games.."> </li>
+    </div>
+    <div id="nav-title">
+      <li> <h1>  <a href="index.html"> GameDot </a> </h1> </li>
+    </div>
+    <div id="nav-btn">
+      <li>  <button id="signOutBtn"> Sign Out </button></li>
+    </div>
+    <div id="nav-mobile"> 
+      <li> <a href="javascript:void(0);" id="nav-img">  <img src="assets/menu.svg" id="hamburger"  alt=""> </a> </li>
+    </div>
+  </ul>
+</nav>    
+
+ 
+    <main id = "main">   <section id=full-card></section> <section class="buttons"> <button id="prev" > <i class="fa fa-arrow-left"  aria-hidden="true"></i> Prev </button> <button id="next"> Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>  </section>
     
 
 
@@ -15,9 +31,11 @@
 
 
 
-
+        <section id = "whenSignedOut" > 
+          <button id="signInBtn"> <span>  <img src="assets/icons8-google (3).svg" alt=""> </span> <p>  Sign in with Google  </p></button>
+    </section>
 <script src=app/app.js defer></script><script>"serviceWorker"in navigator&&navigator.serviceWorker.register("./service-worker.js")</script>
-<script src="app/auth.js"></script>
+
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 
@@ -42,5 +60,6 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+<script src="app/nav.js"></script>
 </body>
 </html>

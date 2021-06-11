@@ -1,3 +1,45 @@
+// authentication 
+
+const auth = firebase.auth();
+
+
+const whenSignedIn = document.getElementById('whenSignedIn');
+const whenSignedOut = document.getElementById('whenSignedOut');
+
+const signInBtn = document.getElementById('signInBtn');
+const signOutBtn = document.getElementById('signOutBtn');
+
+const main = document.getElementById('main') 
+
+
+const provider = new firebase.auth.GoogleAuthProvider();
+
+/// Sign in event handlers
+
+signInBtn.onclick = () => {
+  auth.signInWithPopup(provider);
+} 
+
+signOutBtn.onclick = () => auth.signOut();
+
+auth.onAuthStateChanged(user => {
+    if (user) {
+        // signed in
+        main.style.display = 'grid'
+        whenSignedOut.style.display = "none"
+        signOutBtn.style.display = "block"
+    } else {
+        // not signed in
+        main.style.display = "none"
+        whenSignedOut.style.display = "grid"
+        signOutBtn.style.display = "none"
+    }
+});
+
+// auth done
+
+
+
 let counter = 1; 
 let n;
 
@@ -10,7 +52,11 @@ let button1 = document.getElementById("next")
 let button2 = document.getElementById("prev")
 let page = document.getElementById("page")
 
-page.innerHTML = `Page ${parseInt(localStorage.getItem('counteruser'))}`
+if (parseInt(localStorage.getItem('counteruser')) === NaN){ 
+  page.innerHTML = `Page 1`
+} else {
+  page.innerHTML = `Page ${parseInt(localStorage.getItem('counteruser'))}`
+}
 
 
 
@@ -153,37 +199,5 @@ function cardinfo(){
 
 // localStorage.clear()  
 
-const auth = firebase.auth();
 
-
-const whenSignedIn = document.getElementById('whenSignedIn');
-const whenSignedOut = document.getElementById('whenSignedOut');
-
-const signInBtn = document.getElementById('signInBtn');
-const signOutBtn = document.getElementById('signOutBtn');
-
-const main = document.getElementById('main') 
-
-
-const provider = new firebase.auth.GoogleAuthProvider();
-
-/// Sign in event handlers
-
-signInBtn.onclick = () => auth.signInWithPopup(provider);
-
-signOutBtn.onclick = () => auth.signOut();
-
-auth.onAuthStateChanged(user => {
-    if (user) {
-        // signed in
-        main.style.display = "grid"
-        whenSignedOut.style.display = "none"
-        signOutBtn.style.display = "block"
-    } else {
-        // not signed in
-        main.style.display = "none"
-        whenSignedOut.style.display = "grid"
-        signOutBtn.style.display = "none"
-    }
-});
 
